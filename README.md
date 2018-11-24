@@ -48,7 +48,9 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 >	2) 연관분석
 >	2-1) Apriori Association Rules
 >
->	     nims jupyter을 사용하여 전처리된 엑셀 파일을 코모란 분석기를 이용하여 Tokenize한 후 명사만 추출하여 support minimum threshold를 0.05로 잡았습니다. lift값의 minimum threshold는 0.08로 처리 후, 1:1 연관분석 결과를 내림차순으로 정렬하였습니다.
+>	     nims jupyter을 사용하여 전처리된 엑셀 파일을 코모란 분석기를 이용하여 Tokenize한 후 명사만 추출하여 
+>	     support minimum threshold를 0.05로 잡았습니다. 
+>	     lift값의 minimum threshold는 0.08로 처리 후, 1:1 연관분석 결과를 내림차순으로 정렬하였습니다.
 >
 >	3) 빈도분석
 
@@ -65,7 +67,7 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 
  4-3. SNS 고객세분화 전략
  
-	*연관분석과 Word2Vec을 통해 시장세분화 분석
+	연관분석과 Word2Vec을 통해 시장세분화 분석
 	- 가장 상위 계층(Human1)은 남성과 여성
 	- 그 다음 하위 계층은 2030, 4050으로 세대별로 구분
 	- 2030(Human2) 키워드 ‘남친 여친 남자친구 여자친구 연인’
@@ -77,7 +79,8 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 	- Human5는 유아 (키워드; 유아 아기 어린이 아이들)
 	- Human8은 ‘직장인’을 키워드로 분류
 
- 	분석 결과 각 계층별로 연관성이 높은 영양 성분이 달랐고, 제품을 선택할 때 주로 어떤 경로를 거치는지 확인할 수 있었습니다. 유사한 단어(종합 비타민, 멀티 비타민) 중에서도 어떤 단어가 각 세대에게 더 친숙한지도 파악할 수 있었습니다.
+ 	분석 결과 각 계층별로 연관성이 높은 영양 성분이 달랐고, 제품을 선택할 때 주로 어떤 경로를 거치는지 확인할 수 있었습니다. 
+	유사한 단어(종합 비타민, 멀티 비타민) 중에서도 어떤 단어가 각 세대에게 더 친숙한지도 파악할 수 있었습니다.
 
 이하 분석결과를 바탕으로 아로나민측에게 아로나민의 마켓팅 전략을 세 가지 제시하였습니다.
 

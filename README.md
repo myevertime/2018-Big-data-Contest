@@ -64,7 +64,8 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 	아로나민 제품별로 '광고'와 관련된 감성분석과, 키워드를 중심으로 어떤 연관어들이 있는지를 분석하고, word2vec을 통해 유사도 분석
 
  4-3. SNS 고객세분화 전략
-	연관분석과 Word2Vec을 통해 시장세분화 분석
+ 
+	*연관분석과 Word2Vec을 통해 시장세분화 분석
 	- 가장 상위 계층(Human1)은 남성과 여성
 	- 그 다음 하위 계층은 2030, 4050으로 세대별로 구분
 	- 2030(Human2) 키워드 ‘남친 여친 남자친구 여자친구 연인’

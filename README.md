@@ -9,10 +9,12 @@
 
 	- 아로나민골드 3,238건, 아로나민씨플러스 1,118건, 우루사 12,330건, 임팩타민 3,099건, 센트룸 11,359건
 	- 비타민제 29,736건, 영양제 56,959건
+	
+*데이터예시*
 
 | SNS | Title | Contents | Address | Date |
 | ------------ | ------------- | ------------- | ------------- | ------------- |
-|naver_blog | &lt;찬찬약사.. | 아로나민 골드, 아로나민 씨플러스 많이 들어보셨죠?? ... | https://blog.naver.com/... | 2017#### |
+|naver_blog | 찬찬약사.. | 아로나민 골드, 아로나민 씨플러스 많이 들어보셨죠?? ... | https://blog.naver.com/... | 2017#### |
 
 
 > **2. 전처리 작업**
@@ -32,4 +34,17 @@
 	   인스타그램 Repost 및 트위터 Retweet
 
 >>2-1. **제품별 전처리 작업 후 특징**
->>전처리 작업중 제품별로 다수 등장했던 특징이나 키워드를 중심으로 정리한  
+>>전처리 작업중 제품별로 다수 등장했던 특징이나 키워드를 중심으로 정리한 파일은 다음 링크에 제공되어 있습니다.
+[link keyword][id]
+[id]:https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/edit?usp=sharing
+
+
+> **3. 분석방법**
+>	1) 감성분석
+>	2) 연관분석
+>	2-1) Apriori Association Rules
+>	     nims jupyter을 사용하여 전처리된 엑셀 파일을 코모란 분석기를 이용하여 Tokenize한 후 명사만 추출하여 support minimum threshold를 0.05로 잡았습니다. lift값의 minimum threshold는 0.08로 처리 후, 1:1 연관분석 결과를 내림차순으로 정렬하였습니다.
+>	3) 빈도분석
+
+> **4. 주제별 분석**
+>

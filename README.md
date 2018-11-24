@@ -39,8 +39,7 @@
 
 2-1. **제품별 전처리 작업 후 특징**
 >>전처리 작업중 제품별로 다수 등장했던 특징이나 키워드를 중심으로 정리한 파일은 다음 링크에 제공되어 있습니다.
-[link keyword][id]
-[id]:https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/edit?usp=sharing
+https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/edit?usp=sharing
 
 
 

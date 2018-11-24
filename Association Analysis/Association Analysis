@@ -24,12 +24,12 @@ k = Komoran()
 # - Human8 직장인
 
 
-data = pd.read_excel("비타민제 사용자별로 구별.xlsx", sheet_name = "Human8", names = [i for i in range(6)])
+data = pd.read_excel("filename.xlsx", sheet_name = "Human1~8", names = [i for i in range(6)])
 
 contents = data[[2]] #Contents
 contents_list = list((contents[2].values))
 
-# Removing Typo - "임팩타민" bc of noun extracting
+# Removing Typo
 def removing_typos(a,b,content):
     content[content.index(a):content.index(b)+1] = [''.join(content[content.index(a):content.index(b)+1])]
     return content

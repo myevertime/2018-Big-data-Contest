@@ -20,8 +20,8 @@
 
 **2. 전처리 작업**
 >
->Youtube의 경우 주소와 영상 제목 자료만 포함되어 있어, 분석 대상에 포함되기에 충분하지 않다고 판단하여 제거하였습니다. - __확인부탁__
->('임팩타민'의 경우에는 약사가 주기적으로 정보성 글을 올리는 채널이 있어 제거하지 않았음)
+>Youtube의 경우 주소와 영상 제목 자료만 포함되어 있어, 분석 대상에 포함되기에 충분하지 않다고 판단하여 제거하였습니다.
+>('임팩타민'의 경우에는 약사가 주기적으로 정보성 글을 올리는 채널이 있어 제거하지 않았습니다)
 >
 >분석의 최종 목표를 SNS 고객층의 효과적인 분석으로 두었기에, 소비자의 주관적인 의견이 반영되었는지를 전처리 기준 중 가장 우선시 하였습니다.
 >각 SNS 자료별로 필터링할 단계를 여러 개로 나누어 차등을 두었습니다.
@@ -47,7 +47,9 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 **3. 분석방법**
 >	1) 빈도분석
 >	1-1) Wordcloud: visualize based on simple token counts
+
 >	1-2) TFIDF
+>
 >		TF (Total Frequency): 특정 토큰이 총 몇번 등장하는가? (한 문서에서 여러번 등장한다면 모두 세기)
 >		DF (Document Frequency): 특정 토큰이 몇개의 문서(sns포스팅)에 등장하는가?
 >		TFIDF: TF divided by DF. 영어를 예로 들자면 a, the 같은 토큰은 TF가 높지만 DF도 몹시 높고, 중요한 의미를 갖는 단어가 아님.
@@ -61,7 +63,9 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 >	     lift값의 minimum threshold는 0.08로 처리 후, 1:1 연관분석 결과를 내림차순으로 정렬하였습니다.
 >
 >	3) 유사도분석
+
 >	3-1) word2vec: word embedding
+
 >		how it works: 문장에서 같은 위치에 등장하는 단어들, 일정한 크기의 model의 창 안에 동시에 등장하는 단어들은
 >		맥락을 공유하고, 결과적으로 유사한 의미를 가질 것
 >		what we did: '제품명', '비타민제 시장에서 중요한 특성들(부작용, 피곤, 냄새 등)', '광고모델명' 등의

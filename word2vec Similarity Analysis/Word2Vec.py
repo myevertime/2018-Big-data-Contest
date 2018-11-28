@@ -3,9 +3,6 @@
 
 # # tokenizing&preprocessing
 
-# In[6]:
-
-
 from gensim.models import Word2Vec
 from konlpy.tag import Komoran
 from konlpy.utils import pprint
@@ -13,20 +10,17 @@ kmr=Komoran()
 import pandas as pd
 
 
-# In[7]:
-
-
 import openpyxl
 pure= pd.read_excel("아로나민골드pure.xlsx", header=None, parse_cols="B:C")
 print(pure[0:5])
 
 
-# In[8]:
-
 
 kkma_list_unique = []
 kkma_list_all = []
 cloudlst = []
+
+# Tokenize 오류에 따른 텍스트 전처리
 
 for row in pure.iterrows():
     data=kmr.pos(row[1].to_string())
@@ -86,27 +80,12 @@ for row in pure.iterrows():
 
 # # word2vec similarity
 
-# In[9]:
-
-
 embedding_model = Word2Vec(cloudlst, size=30, window = 2, min_count=10, workers=4, iter=100, sg=1)
-
-
-# In[10]:
-
 
 embedding_model.similarity('골드','효과')
 
-
-# In[11]:
-
-
 vecresult=embedding_model.most_similar(positive=['효과'], topn=100)
 vecresult
-
-
-# In[12]:
-
 
 vecframe=pd.DataFrame(vecresult, columns=['token', 'similarity'])
 #vecframe.to_excel('골드_효과.xlsx')
@@ -114,18 +93,11 @@ vecframe=pd.DataFrame(vecresult, columns=['token', 'similarity'])
 
 # # visualizing to cluster map
 
-# In[15]:
-
-
 from sklearn.manifold import TSNE
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 import gensim 
 import gensim.models as g
-
-
-# In[ ]:
-
 
 vocab = list(embedding_model.wv.vocab)
 X = embedding_model[vocab]

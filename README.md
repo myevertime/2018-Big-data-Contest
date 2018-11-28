@@ -50,9 +50,10 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 
 >	1-2) TFIDF
 >
->		TF (Total Frequency): 특정 토큰이 총 몇번 등장하는가? (한 문서에서 여러번 등장한다면 모두 세기)
->		DF (Document Frequency): 특정 토큰이 몇개의 문서(sns포스팅)에 등장하는가?
->		TFIDF: TF divided by DF. 영어를 예로 들자면 a, the 같은 토큰은 TF가 높지만 DF도 몹시 높고, 중요한 의미를 갖는 단어가 아님.
+>		TF (Total Frequency): 특정 토큰이 등장하는 횟수 (한 문서에서 여러번 등장한다면 모두 세기)
+>		DF (Document Frequency): 특정 토큰이 문서(sns포스팅)에 등장하는 횟수
+>		TFIDF: TF divided by DF
+>		예) a, the 같은 토큰은 TF가 높지만 DF도 몹시 높고, 중요한 의미를 갖는 단어가 아닙니다.
 >		sort by rounded score of TFIDF, with lower limit of DF
 >
 >	2) 연관분석
@@ -69,7 +70,7 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 >		how it works: 문장에서 같은 위치에 등장하는 단어들, 일정한 크기의 model의 창 안에 동시에 등장하는 단어들은
 >		맥락을 공유하고, 결과적으로 유사한 의미를 가질 것
 >		what we did: '제품명', '비타민제 시장에서 중요한 특성들(부작용, 피곤, 냄새 등)', '광고모델명' 등의
->		키워드를 중심으로 단어들 간의 유사도를 알아봄 
+>		키워드를 중심으로 단어들 간의 유사도를 알아보았습니다.
 >
 >	4) 감성분석
 >	4-1) KOSAC sentiment dictionary

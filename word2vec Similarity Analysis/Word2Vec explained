@@ -1,0 +1,10 @@
+tokenize with Komoran
+process mis-tokenized words such as proper nouns e.g., vitamin product names
+
+word2vec
+get similarity between two words
+find top most similar words relevant to the given word
+
+TSNE
+visualize 100 words into a cluster
+relevant words will appear physically adjacent on the map

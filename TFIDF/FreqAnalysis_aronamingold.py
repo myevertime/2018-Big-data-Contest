@@ -3,9 +3,6 @@
 
 # # tokenizing & processing
 
-# In[1]:
-
-
 from konlpy.tag import Kkma
 from konlpy.tag import Okt
 from konlpy.tag import Komoran
@@ -15,26 +12,18 @@ twt=Okt()
 kmr=Komoran()
 import pandas as pd
 
-
-# In[1]:
-
-
 get_ipython().system('pip install konlpy')
 
 
-# In[2]:
-
-
 import openpyxl
-pure= pd.read_excel("아로나민골드pure.xlsx", header=None, parse_cols='B:C')
-
-
-# In[12]:
+pure= pd.read_excel( file_path , header=None, parse_cols='B:C')
 
 
 kkma_list_unique = []
 kkma_list_all = []
 cloudlst = []
+
+# Tokenize 오류에 따른 전처리
 
 for row in pure.iterrows():
     data=kmr.pos(row[1].to_string())
@@ -85,8 +74,7 @@ for row in pure.iterrows():
     cloudlst.append(nvadj2)
 
 
-# In[13]:
-
+# TFIDF
 
 import nltk
 
@@ -110,9 +98,6 @@ dflst=list(nltk_text_unique.vocab().items())
 
 # # counting frequency and sorting frame
 
-# In[14]:
-
-
 import numpy as np
 tffrm=pd.DataFrame(list(tflst),columns=['token','tf'])
 dffrm=pd.DataFrame(list(dflst), columns=['token','df'])
@@ -121,15 +106,9 @@ frm['tfidf']=frm['tf'].div(frm.df)
 frm['tfidf_fl']=round(frm['tfidf'])
 
 
-# In[15]:
-
-
 #gt1=frm['tf']>0.01*sum(frm.tf)
 gt2=frm['df']>0.03*len(pure)
 gtfrm=frm[gt2]
-
-
-# In[16]:
 
 
 result=gtfrm.sort_values(['tfidf_fl','tf'],ascending=[False,False])
@@ -139,15 +118,9 @@ result.to_excel('빈도표_골드.xlsx')
 
 # # Wordcloud
 
-# In[11]:
-
-
 import matplotlib.pyplot as plt
 import platform
 from wordcloud import WordCloud
-
-
-# In[12]:
 
 
 cloudlst2=[]
@@ -157,22 +130,8 @@ for i in cloudlst:
 cloudnltk= nltk.Text(cloudlst2)
 
 
-# In[13]:
-
-
 cloudtext=cloudnltk.vocab().most_common(100)
 tmptext=dict(cloudtext)
-
-
-# In[20]:
-
-
-del tmptext['로나']
-del tmptext['아로']
-del tmptext['나민']
-
-
-# In[21]:
 
 
 wordcloud=WordCloud(font_path='아리따돋움SemiBold.ttf', relative_scaling=0.3, colormap='autumn', background_color='white').generate_from_frequencies(tmptext)
@@ -181,9 +140,5 @@ plt.imshow(wordcloud)
 plt.axis('off')
 plt.show()
 
-
-# In[22]:
-
-
-wordcloud.to_file('아로나민골드빈도.png')
+wordcloud.to_file(file_path)
 

@@ -53,7 +53,9 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 >	2-1) Apriori Association Rules
 >
 >	     utilized _nims jupyter_ and _Comoran Tokenizer_ on preprocessed data to tokenize nouns
+>	     
 >	     held minimum threshold of _support_ as 0.05
+>	     
 >	     held minimum thresholdl of _lift_ as 0.08
 >
 >	3) Similarity Analysis
@@ -64,7 +66,7 @@ https://docs.google.com/document/d/1j9fo8MiQO1yc5b-gLkDuwctuijfbbv4xHG0MZNV4y2g/
 >	4) Sentiment Analysis
 >	4-1) KOSAC sentiment dictionary
 
->	    utilized _Polarity_ dictionary of KOSAC sentiment dictionary
+>	     utilized _Polarity_ dictionary of KOSAC sentiment dictionary
 
 
 **4. Results**

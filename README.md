@@ -1,5 +1,5 @@
 # 2018-Yonsei Bigdata Analysis Competition
-## Aronamin-ing 팀
+## Team Aronamin-ing
 
 **1. Data Info **
 

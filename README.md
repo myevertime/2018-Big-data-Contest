@@ -7,7 +7,9 @@
 > SNS involved Facebook, Instagram, Naver Blog, Naver Cafe, Daum Blog, Daum Cafe, and Youtube
 
 Data Count per Brands
+
 	- Aronamin Gold : 3,238 | Aronamin C+ : 1,118건 | Urusa : 12,330 | Impactamin : 3,099 | Centrum : 11,359
+	
 	- Vitamins : 29,736, Nutrient Supplements : 56,959
 	
 Data Sample
